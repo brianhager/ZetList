@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZetList.Views.DropboxPage">
+    <ListView x:Name="dropboxItemslistView" Margin="20" SeparatorVisibility="None" RowHeight="60">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Margin="0,0,0,0" Orientation="Horizontal" VerticalOptions="FillAndExpand" Spacing="20">
+                        <Label Text="{Binding ItemName}" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
+                        <Label Text="{Binding FileOrFolder}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="Small"/>
+                        <Label Text="{Binding FileSize}" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="Micro"/>
+                        <Button         HorizontalOptions="EndAndExpand"
+                                        Clicked="Download_Clicked"
+                                        Text="Download"
+                                        TextColor="White"
+                                        CommandParameter="{Binding .}"
+                                        BackgroundColor="Blue" 
+                                        HeightRequest="10"
+                                        WidthRequest="70"
+                                        />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

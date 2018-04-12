@@ -123,8 +123,14 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore">
       <Version>2.1.0-preview1-final</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
       <Version>2.1.0-preview1-final</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite3">
+      <Version>3.8.8.3</Version>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.bundle_sqlcipher">
+      <Version>1.1.10</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Dropbox.Api">
       <Version>4.5.3.1</Version>

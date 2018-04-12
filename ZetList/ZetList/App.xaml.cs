@@ -29,6 +29,8 @@ namespace ZetList
                     Debug.WriteLine("databasePath: " + databasePath);
                     database = ZetListDatabase.Create(databasePath);
                 }
+                var dbpath = DependencyService.Get<IFileHelper>().GetLocalFilePath("ZetListSQLite.db");
+                Debug.WriteLine("databasePath: " + dbpath);
                 return database;
             }
 
